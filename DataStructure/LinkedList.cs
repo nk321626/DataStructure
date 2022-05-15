@@ -11,7 +11,7 @@ namespace DataStructure
         internal Node head;
         private Node temp;
 
-        internal void Add(int data)
+        internal void Appending(int data)
         {
             Node node = new Node(data);
             if (this.head == null)
@@ -43,6 +43,7 @@ namespace DataStructure
                 temp = temp.next;
             }
         }
+<<<<<<< HEAD
         internal void AddReverse(int data)
         {
             Node node = new Node(data);
@@ -58,5 +59,7 @@ namespace DataStructure
             }
             Console.WriteLine("{0} inserted into linked list", node.data);
         }
+=======
+>>>>>>> UC3_CreateLinkedListByAppending
     }
 }
