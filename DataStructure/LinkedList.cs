@@ -11,7 +11,7 @@ namespace DataStructure
         internal Node head;
         private Node temp;
 
-        internal void Add(int data)
+        internal void Appending(int data)
         {
             Node node = new Node(data);
             if (this.head == null)
@@ -42,17 +42,6 @@ namespace DataStructure
                 Console.WriteLine(temp.data + " ");
                 temp = temp.next;
             }
-        }
-        internal void AddReverse(int data)
-        {
-            Node node = new Node(data);
-            if (this.head == null)
-            {
-                this.head = head;
-                head = node;
-                head.next = temp;
-            }
-            Console.WriteLine("{0} inserted into linked list", node.data);
         }
     }
 }
