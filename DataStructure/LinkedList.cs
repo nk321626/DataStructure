@@ -11,7 +11,7 @@ namespace DataStructure
         internal Node head;
         private Node temp;
 
-        internal void Appending(int data)
+        internal void Add(int data)
         {
             Node node = new Node(data);
             if (this.head == null)
@@ -43,23 +43,39 @@ namespace DataStructure
                 temp = temp.next;
             }
         }
-<<<<<<< HEAD
-        internal void AddReverse(int data)
+        internal Node InsertAtParticularPosition(int position, int data)
         {
-            Node node = new Node(data);
-            if (this.head == null)
+            if (position < 1)
             {
-                this.head = node;
+                Console.WriteLine("Invalid position");
+
+                if (position == 1)
+                {
+                    var newNode = new Node(data);
+                    newNode.next = this.head;
+                    head = newNode;
+                }
+                else
+                {
+                    while (position-- != 0)
+                    {
+                        if (position == 1)
+                        {
+                            Node node = new Node(data);
+                            node.next = this.head.next;
+                            head.next = node;
+                            break;
+                        }
+                        head = head.next;
+                    }
+                    if (position != 1)
+
+                        Console.WriteLine("Position out of rang");
+                }
+
             }
-            else
-            {
-                this.head = head;
-                head = node;
-                head.next = temp;
-            }
-            Console.WriteLine("{0} inserted into linked list", node.data);
+            Console.WriteLine("Inserted value is : " + data);
+            return head;
         }
-=======
->>>>>>> UC3_CreateLinkedListByAppending
     }
 }
