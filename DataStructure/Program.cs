@@ -19,7 +19,7 @@ namespace DataStructure
             list.Add(56);
             list.Add(30);
             list.Add(70);
-            list.RemoveFirstNode();
+            list.RemoveLastNode();
             Console.WriteLine("After Removing is : ");
 
             //list.AddReverse(70);
