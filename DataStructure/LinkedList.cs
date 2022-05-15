@@ -48,6 +48,10 @@ namespace DataStructure
             Node node = new Node(data);
             if (this.head == null)
             {
+                this.head = node;
+            }
+            else
+            {
                 this.head = head;
                 head = node;
                 head.next = temp;
