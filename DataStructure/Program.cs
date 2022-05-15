@@ -19,9 +19,9 @@ namespace DataStructure
             list.Add(56);
             list.Add(30);
             list.Add(70);
-            int searchData = list.Search(30);
-            if (searchData != 0)
-                Console.WriteLine("\n{0} is present in the LinkedList ", searchData);
+            int position = list.Search(30);
+            position++;
+            list.InsertAtParticularPosition(position, 40);
 
             //list.AddReverse(70);
             //list.AddReverse(30);
@@ -30,7 +30,7 @@ namespace DataStructure
             //list.Appending(30);
             //list.Appending(70);
             //Console.WriteLine("Display Nodes Are:");
-            //list.Display();
+            list.Display();
             //list.InsertAtParticularPosition(2, 30);
             Console.WriteLine("============================================");
             Console.ReadLine();
