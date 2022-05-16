@@ -18,10 +18,11 @@ namespace DataStructure
             LinkedList list = new LinkedList();
             list.Add(56);
             list.Add(30);
+            list.Add(40);
             list.Add(70);
-            int position = list.Search(30);
-            position++;
-            list.InsertAtParticularPosition(position, 40);
+            int position = list.Search(40);
+            list.DeleteNodeAtParticularPosition(position);
+            Console.WriteLine("\nAfter deleting 40 then size and final sequence is: ");
 
             //list.AddReverse(70);
             //list.AddReverse(30);
